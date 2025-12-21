@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { Product } from '../../models/Product';
 import { ShoppingCartItem } from '../../models/ShoppingCartItem';
 import { find } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cart',
@@ -27,7 +28,8 @@ constructor(private serve : Prservice,private router : Router){}
     product.quantity--;
   }else{
   this.serve.getCart.removeItem(product);}
- }
+  Swal.fire('Removed','The item Removed','info'); 
+}
 goToCatalog(){
   this.router.navigate(['/catalog/all']);
 }
