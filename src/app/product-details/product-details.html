@@ -1,0 +1,53 @@
+<div class="details-container">
+  <div class="product-wrapper">
+    
+    <div class="image-section">
+      <div class="main-image-bg">
+        <img [src]="getImage()" [alt]="getProduct.productTitle">
+      </div>
+    </div>
+
+    <div class="info-section">
+      <nav class="breadcrumb">
+        <span>Catalog</span> / <span>{{ getProduct.category }}</span>
+      </nav>
+
+      <h1 class="product-title">{{ getProduct.productTitle }}</h1>
+      
+      <div class="price-tag">
+        <span class="currency">DH</span>
+        <span class="amount">{{ getProduct.prouctPrice }}</span>
+      </div>
+
+      <div class="description">
+        <h3>About this item</h3>
+        <p>
+          Experience the next level of performance with the {{ getProduct.productTitle }}. 
+          Designed for efficiency and style, this {{ getProduct.category }} device 
+          integrates seamlessly into your professional and personal life.
+        </p>
+      </div>
+
+      <div class="spec-list">
+        <div class="spec-item">
+          <span class="spec-label">Category</span>
+          <span class="spec-value">{{ getProduct.category }}</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Availability</span>
+          <span class="spec-value stock">In Stock</span>
+        </div>
+      </div>
+
+      <div class="action-area">
+        <button class="add-to-cart-btn" (click)="buy(getProduct)">
+          Add to Cart
+        </button>
+        <button class="back-btn" (click)="goToSignCatalog()">
+          Back to Catalog
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

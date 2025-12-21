@@ -1,0 +1,135 @@
+:host {
+  --primary-black: #111111;
+  --error-red: #e11d48;
+  --input-border: #e2e8f0;
+  --input-focus: #000000;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.sign-in {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary-black);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+}
+
+.sub-text {
+  color: var(--text-muted);
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+input {
+  width: 90%;
+  padding: 12px 16px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  outline: none;
+  
+}
+
+input:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.input-error {
+  border-color: var(--error-red) !important;
+}
+
+.error-container {
+  min-height: 20px;
+  margin-top: 4px;
+}
+
+.error {
+  color: var(--error-red);
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.button-cta {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-black);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-top: 10px;
+}
+
+.button-cta:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.button-cta:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.signInError {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #fff1f2;
+  border: 1px solid #ffe4e6;
+  border-radius: 8px;
+  color: var(--error-red);
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+}
+.register{
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    padding-left: 100px;
+    padding-top: 20px;
+}

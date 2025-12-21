@@ -1,0 +1,33 @@
+<div class="cart-container">
+  <div *ngFor="let item of cart.getItems(); let i = index" class="cart-item">
+    
+    <div class="item-image">
+      <img [src]=" item.itemProduct.productImage" [alt]="item.itemProduct.productTitle">
+    </div>
+
+    <div class="item-details">
+      <div class="item-main">
+        <h2>{{item.itemProduct.productTitle}}</h2>
+        <p class="category">{{item.itemProduct.category}}</p>
+      </div>
+
+      <div class="item-pricing">
+        <div class="quantity-control">
+          <span>Qty: <strong>{{item.quantity}}</strong></span>
+        </div>
+        <div class="price-info">
+          <span class="unit-price">{{item.itemProduct.prouctPrice}} DH</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-actions">
+      <button class="remove-btn" (click)="removeItem(item)">
+        <i class="trash-icon"></i> Remove
+      </button>
+    </div>
+
+  </div>
+<div class="btn-container"><button class="btn-primary" (click)="goToCatalog()" *ngIf="!isEmpty()">Back To Catalog</button></div>
+
+</div>

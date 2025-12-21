@@ -1,0 +1,28 @@
+
+<div class="title">
+  <h1>Catalog Product:</h1>
+<nav>
+<a routerLink="/catalog/all">All</a>
+<a routerLink="/catalog/phones">phones</a>
+<a routerLink="/catalog/Tv">Tv</a>
+<a routerLink="/catalog/laptop">laptop</a>
+</nav>
+</div>
+<div class="product_container">
+<div *ngFor="let product of filteredProducts; let i = index" class="product-card"  >
+  
+  <div class="product-info" (click) = "goTodetails(product)">
+    <img [src]="getImage(product)" [alt]="product.productTitle" >
+    <h2>{{ product.productTitle }}</h2>
+    <p>{{ product.category }}</p>
+      </div>
+        <div>
+                   <h3 class="price">{{ product.prouctPrice}} DH</h3>
+
+         <button class="buy-btn" (click)="buy(product)" >Buy</button>
+
+        </div>
+       </div>
+    </div>
+<router-outlet></router-outlet>
+
